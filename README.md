@@ -16,15 +16,15 @@ demonstrating how modern EDR systems work at a high level.
 ---
 ## Project layout
 edr-lab/
-├── main.py # EDR Simulation
-├── modules/
-│ ├── event_logger.py
-│ ├── process_monitor.py
-│ ├── file_monitor.py
-│ ├── network_monitor.py
-│ └── registry_monitor.py
-├── logs/
-└── README.md
+├── main.py # EDR Simulation <br>
+├── modules/                 <br>
+│ ├── event_logger.py        <br>
+│ ├── process_monitor.py     <br>
+│ ├── file_monitor.py        <br>
+│ ├── network_monitor.py     <br>
+│ └── registry_monitor.py    <br>
+├── logs/                    <br>
+└── README.md          
 
 ---
 
