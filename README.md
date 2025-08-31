@@ -1,52 +1,64 @@
 # EDR Lab — Simulated Endpoint Detection & Response
 
-This project is a **lightweight Endpoint Detection & Response (EDR) simulator** built in Python.  
-It continuously monitors and generates alerts for **file, process, network, and registry events** —  
-demonstrating how modern EDR systems work at a high level.
+Simulated EDR monitoring environment built in Python. Tracks file, process, network, and registry events with real-time alerts.
 
 ---
 
-## 🚀 Features
-- **File Monitoring** → Detects simulated file creation, modification, and deletion events.
-- **Process Monitoring** → Logs suspicious process creation & termination events.
-- **Network Monitoring** → Flags DNS queries and outbound/inbound connections.
-- **Registry Monitoring** → Simulates autorun entries, permission changes, and policy modifications.
-- **Alerting System** → Each event is tagged with type, severity, and timestamp.
+## 🗂 Project Layout
 
----
-## Project layout
-edr-lab/
-├── main.py # EDR Simulation <br>
-├── modules/                 <br>
-│ ├── event_logger.py        <br>
-│ ├── process_monitor.py     <br>
-│ ├── file_monitor.py        <br>
-│ ├── network_monitor.py     <br>
-│ └── registry_monitor.py    <br>
-├── logs/                    <br>
-└── README.md          
+edr-lab/ <br>
+├── main.py <br>
+├── modules/ <br> 
+│ ├── event_logger.py <br>
+│ ├── process_monitor.py <br>
+│ ├── file_monitor.py <br>
+│ ├── network_monitor.py <br> 
+│ └── registry_monitor.py <br> 
+├── logs/<br> 
+└── README.md <br>
 
 ---
 
-## ▶️ Usage
-Clone the repo:
+## ⚡ Features
+
+- **File Monitoring** – Detects file creation, modification, deletion.
+- **Process Monitoring** – Tracks process start and stop events.
+- **Network Simulation** – Logs simulated network connections.
+- **Registry Simulation** – Monitors registry-like events for demonstration.
+- **Real-Time Alerts** – JSON-formatted alerts printed to console.
+
+---
+
+## How to Run
+
+1. Clone the repository:
+
 ```bash
 git clone https://github.com/ajaykr09/edr-lab.git
 cd edr-lab
 
----
+3. Create a virtual environment:
+python3 -m venv venv
+source venv/bin/activate
 
-## Quick start
+4. Install dependencies:
+pip install -r requirements.txt
+
+6. Run the EDR agent:
 python3 main.py
 
-Stop the demo with Ctrl+C.
-Check logs/events.log for persisted events.
+5. In a separate terminal, run demo scripts to generate events:
+python3 test_edr_events_demo.py
+Press Ctrl+C to stop the agent.
 
-🎯 Why this project?
+💻 Technology Stack
+Python 3
 
-I built this project to learn and demonstrate security monitoring concepts.
-It’s a great way to showcase knowledge of EDR, event logging, and threat detection. Feed simulated events to a SIEM pipeline. Extend detection logic into a real monitor (psutil/watchdog) for production-style labs.
+psutil for process monitoring
 
-Author
+watchdog for file system monitoring
 
-Ajay K — https://github.com/ajaykr09
+JSON for alert logging
+
+📈 Usage
+This is a simulated environment designed for educational purposes, ideal for understanding how EDR agents track endpoint activity.
